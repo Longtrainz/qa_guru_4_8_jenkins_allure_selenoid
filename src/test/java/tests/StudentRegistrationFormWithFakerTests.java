@@ -58,6 +58,7 @@ public class StudentRegistrationFormWithFakerTests extends TestBase {
         $("#uploadPicture").uploadFromClasspath("img/" + picture);
         // set current address
         $("#currentAddress").val(currentAddress);
+        $("#submit").scrollIntoView(false);
         // set state and city
         $("#state").click();
         $("#stateCity-wrapper").$(byText(state)).click();
