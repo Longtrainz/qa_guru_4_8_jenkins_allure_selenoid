@@ -1,6 +1,7 @@
 package tests;
 
 import com.github.javafaker.Faker;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
@@ -10,7 +11,8 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class StudentRegistrationFormWithFakerTests extends TestBase {
 
-    @Test
+    @Disabled()
+    @Test()
     void successfulFillFormTest() {
         Faker faker = new Faker();
 
@@ -80,6 +82,7 @@ public class StudentRegistrationFormWithFakerTests extends TestBase {
         $x("//td[text()='State and City']").parent().shouldHave(text(state + " " + city));
     }
 
+    @Disabled()
     @Test
     @Tag("negative")
     void negativeFillFormTest() {

@@ -27,7 +27,7 @@ public class Junit5Annotations {
                 System.out.println("        someTest here");
                 assertTrue(true);
             }
-
+            @Disabled()
             @Test
             @DisplayName("Another test")
             void anotherTest() {

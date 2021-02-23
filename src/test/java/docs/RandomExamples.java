@@ -1,12 +1,13 @@
 package docs;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import static utils.RandomUtils.*;
 
 
 public class RandomExamples {
-
+    @Disabled()
     @Test
     void randomExample() {
         String randomString = getRandomString(22);
