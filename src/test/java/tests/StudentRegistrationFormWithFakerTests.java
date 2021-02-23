@@ -82,7 +82,6 @@ public class StudentRegistrationFormWithFakerTests extends TestBase {
         $x("//td[text()='State and City']").parent().shouldHave(text(state + " " + city));
     }
 
-    @Disabled()
     @Test
     @Tag("negative")
     void negativeFillFormTest() {
