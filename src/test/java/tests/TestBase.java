@@ -18,14 +18,14 @@ public class TestBase {
         Configuration.startMaximized = true;
 //        Configuration.browser = "firefox";
 
-//        if(System.getProperty("remote_driver") != null) {
+        if (System.getProperty("remote_driver") != null) {
             // config for Java + Selenide
             DesiredCapabilities capabilities = new DesiredCapabilities();
-//            capabilities.setCapability("enableVNC", true);
+            capabilities.setCapability("enableVNC", true);
 //            capabilities.setCapability("enableVideo", true);
             Configuration.browserCapabilities = capabilities;
-//            Configuration.remote = System.getProperty("remote_driver");
-            Configuration.remote = "http://167.71.48.36:4444/wd/hub";
+            Configuration.remote = System.getProperty("remote_driver");
+//            Configuration.remote = "http://167.71.48.36:4444/wd/hub";
 
             // config for Java + Selenium
 //        DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -39,7 +39,7 @@ public class TestBase {
 //                URI.create("http://selenoid:4444/wd/hub").toURL(),
 //                capabilities
 //        );
-//        }
+        }
     }
 
     @AfterEach
@@ -47,7 +47,7 @@ public class TestBase {
         attachScreenshot("Last screenshot");
         attachPageSource();
         attachAsText("Browser console logs", getConsoleLogs());
-        if(System.getProperty("video_storage") != null)
+        if (System.getProperty("video_storage") != null)
             attachVideo();
         closeWebDriver();
     }

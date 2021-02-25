@@ -9,6 +9,10 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
+
 public class StudentRegistrationFormWithFakerTests extends TestBase {
 
     @Disabled()

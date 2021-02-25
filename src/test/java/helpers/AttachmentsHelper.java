@@ -39,8 +39,7 @@ public class AttachmentsHelper {
     }
 
     public static String getVideoUrl() {
-//        return System.getProperty("video_storage") + getSessionId() + ".mp4";
-        return "http://167.71.48.36:8080/video/" + getSessionId() + ".mp4";
+        return System.getProperty("video_storage") + getSessionId() + ".mp4";
     }
 
     public static String getSessionId(){
